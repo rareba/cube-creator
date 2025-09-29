@@ -1,5 +1,5 @@
 {
-  "name": "@zazuko/cube-creator",
+  "name": "@swissfederalarchives/lindas-cube-creator",
   "private": true,
   "scripts": {
     "prepare": "husky install",

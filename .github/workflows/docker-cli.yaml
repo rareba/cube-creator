@@ -5,7 +5,7 @@ on:
     branches:
       - "**"
     tags:
-      - "cube-creator-cli/v*.*.*"
+      - "lindas-cube-creator-cli/v*.*.*"
 
 jobs:
   build:
@@ -42,8 +42,8 @@ jobs:
         uses: zazuko/action-docker-meta@main
         id: docker_meta
         with:
-          images: ghcr.io/zazuko/cube-creator-cli
-          strip-tag-prefix: cube-creator-cli/
+          images: ghcr.io/rareba/lindas-cube-creator-cli
+          strip-tag-prefix: lindas-cube-creator-cli/
           include-pipeline-id: true
 
       - name: Build and push
@@ -64,7 +64,7 @@ jobs:
         env:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           SENTRY_ORG: zazuko
-          SENTRY_PROJECT: cube-creator-cli
+          SENTRY_PROJECT: lindas-cube-creator-cli
         with:
-          version_prefix: cube-creator-cli@
+          version_prefix: lindas-cube-creator-cli@
           ignore_empty: true
